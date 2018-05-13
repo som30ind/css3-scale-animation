@@ -1,0 +1,18 @@
+{
+  "name": "animation",
+  "version": "1.0.0",
+  "description": "Animation",
+  "main": "index.js",
+  "scripts": {
+    "start": "light-server -s ./public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Animation"
+  ],
+  "author": "Somnath Sinha",
+  "license": "ISC",
+  "dependencies": {
+    "light-server": "^2.5.1"
+  }
+}

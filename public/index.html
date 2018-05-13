@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .slide-1 {
+      background-color: aqua;
+      /* display: none; */
+    }
+
+    .slide-animated {
+      position: absolute;
+      transform-origin: center;
+      transform: translate3d(0px, -150px, 0px) scale3d(0.3, 0.3, 1);
+      left: -3vw;
+      top: -3vh;
+      width: 106vw;
+      height: 106vh;
+    }
+
+    .slide-2 {
+      background-color: blueviolet;
+      transition: transform 1s;
+    }
+
+    .slide-3 {
+      background-color: red;
+      transition: transform 1s, opacity 0.4s;
+      transform: translate3d(0px, -150px, 0px) scale3d(0.3, 0.3, 1);
+      opacity: 1;
+    }
+
+    .slide-zoom {
+      transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
+    }
+
+    .slide-zoom-out {
+      transform: translate3d(0px, -150px, 0px) scale3d(0, 0, 0);
+      opacity: 0;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        document.querySelector('.slide-2').classList.add('slide-zoom');
+        document.querySelector('.slide-3').classList.add('slide-zoom-out');
+      }, 2000);
+    });
+  </script>
+</head>
+
+<body>
+<div class="slide slide-1">Item 1</div>
+<div class="slide-animated slide-2">Item 2</div>
+<div class="slide-animated slide-3">Item 3</div>
+</body>
+
+</html>
